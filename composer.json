@@ -1,0 +1,15 @@
+{
+    "name": "hexor/wxpic",
+    "authors": [
+        {
+            "name": "张哲",
+            "email": "cupsoda@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Hexor\\WXPic\\": "src/"
+        }
+    }
+}
