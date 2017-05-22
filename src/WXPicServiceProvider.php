@@ -16,7 +16,7 @@ class WXPicServiceProvider extends ServiceProvider
 
         include(__DIR__ . '/routes.php');
 
-        $this->loadMigrationsFrom(__DIR__ . '/migrations/wx_cache_imgs_migration.php');
+        $this->loadMigrationsFrom(__DIR__ . '/migrations/');
 //        $this->loadViesFrom(__DIR__ . '/views', 'HelloWorld');
     }
 
