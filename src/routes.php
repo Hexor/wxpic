@@ -12,3 +12,8 @@
 */
 
 Route::get('hello', 'Hexor\WXPic\WXPicController@index');
+
+
+Route::get('2local', 'Hexor\WXPic\WXPicController@toLocal');
+
+Route::get('2remote', 'Hexor\WXPic\WXPicController@toRemote');
