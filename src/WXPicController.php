@@ -14,4 +14,20 @@ class WXPicController extends Controller
 
         return "hello world";
     }
+
+    public function toLocal(Request $request)
+    {
+        $remote = $request->input(['remote']);
+        return WXPic::wx2Local($remote);
+
+        return $remote;
+    }
+
+    public function toRemote(Request $request)
+    {
+        $local = $request->input(['local']);
+        return WXPic::local2WX($local);
+
+        return $local;
+    }
 }

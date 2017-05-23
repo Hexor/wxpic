@@ -1,6 +1,7 @@
 <?php
 namespace Hexor\WXPic;
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
 
 class WXPicServiceProvider extends ServiceProvider
@@ -17,6 +18,13 @@ class WXPicServiceProvider extends ServiceProvider
         include(__DIR__ . '/routes.php');
 
         $this->loadMigrationsFrom(__DIR__ . '/migrations/');
+
+        if(!File::exists(public_path().env('WXPIC_CACHE_DIRECTORY', '/wechat_cache_image/'))) {
+            File::makeDirectory(
+                public_path().env('WXPIC_CACHE_DIRECTORY', '/wechat_cache_image/'),0755,true
+            );
+        }
+
 //        $this->loadViesFrom(__DIR__ . '/views', 'HelloWorld');
     }
 
